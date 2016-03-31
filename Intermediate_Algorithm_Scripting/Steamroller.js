@@ -21,13 +21,7 @@ myArray = arr.reduce(function(a,b) {
 
 }, []);
 
-
-
 return myArray;
-
-
-
-
 }
 
 steamroller([1, [2], [3, [[4]]]]);
