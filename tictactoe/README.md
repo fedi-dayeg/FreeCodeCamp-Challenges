@@ -15,4 +15,8 @@
 
 #### Notes
 
+A working demonstration can be found on [CodePen](http://codepen.io/ManBearPigg/pen/RaLRjQ).
+
 The computer opponent acts randomly. It has not been given any skill. Feel free to contribute to this repository by giving artificial intelligence to our computer opponent in the domain of Tic Tac Toe.
+
+The application might benefit from an updated alert message if it was styled better than the default alert message.
