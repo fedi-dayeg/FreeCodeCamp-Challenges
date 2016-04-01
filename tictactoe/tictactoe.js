@@ -106,7 +106,8 @@ document.getElementById('button7').value == "X"
     disableAll();
 }
 // Else if O wins, alert "O Wins!".
-else if (document.getElementById('button1').value == "X" &&
+else if (
+document.getElementById('button1').value == "O" &&
 document.getElementById('button2').value == "O" &&
 document.getElementById('button3').value == "O" ||
 document.getElementById('button4').value == "O" &&
