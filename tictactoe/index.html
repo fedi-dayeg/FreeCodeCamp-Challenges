@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <title></title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="tictactoe.js"></script>
 <link rel="stylesheet" type="text/css" href="tictactoe.css">
 </head>
 <body>
 
 <div id="gameContainer">
-<div id="box">
+<div id="box" style="display:none;">
 <!-- Buttons: Assign button id, onclick pass it to clickButton function. -->
 <input class="myButtons" type="button" id="button1" onclick="clickButton('button1')"></input>
 <input class="myButtons" type="button" id="button2" onclick="clickButton('button2')"></input>
@@ -21,10 +23,13 @@
 <input class="myButtons" type="button" id="button8" onclick="clickButton('button8')"></input>
 <input class="myButtons" type="button" id="button9" onclick="clickButton('button9')"></input>
 </div>
-
 <!-- Reset button -->
-<button id="resetButton" onclick="reset()">Reset</button>
+<button id="resetButton" style="display:none;" onclick="reset()">Reset</button>
+<input type="button" id="playerX" value="X"></input>
+<input type="button" id="playerO" value="O"></input>
+<h3 id="instructions">Choose X or O</h3>
 </div>
+
 
 </body>
 </html>

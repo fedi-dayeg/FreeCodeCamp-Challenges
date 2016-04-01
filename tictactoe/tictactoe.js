@@ -1,8 +1,44 @@
-function clickButton(btn) {
-  // PLAYER TURN
+var player;
+$( document ).ready(function() {
 
+// Declare global variable player.
+
+  // If playerX button clicked, init assignX.
+  document.getElementById("playerX").addEventListener("click", assignX);
+  // If playerO button clicked, init assignO.
+  document.getElementById("playerO").addEventListener("click", assignO);
+    // Set player equal to X if this function is called.
+    function assignX() {
+      player = document.getElementById('playerX').value;
+      document.getElementById('box').style = "display:flex;";
+      document.getElementById('resetButton').style = "display:block;";
+      document.getElementById('playerX').style = "display:none;";
+      document.getElementById('playerO').style = "display:none;";
+      document.getElementById('instructions').style = "display:none;";
+
+    }
+    // Set player equal to O if this function is called.
+    function assignO() {
+        player = document.getElementById('playerO').value;
+        document.getElementById('box').style = "display:flex;";
+        document.getElementById('resetButton').style = "display:block;";
+        document.getElementById('playerO').style = "display:none;";
+        document.getElementById('playerX').style = "display:none;";
+        document.getElementById('instructions').style = "display:none;";
+    }
+});
+
+function clickButton(btn) {
+if (player == "X") {
+  player2 = "O";
+}
+else if (player == "O") {
+  player2 = "X";
+}
+
+  // PLAYER TURN
     // Add "X" value to button clicked.
-    document.getElementById(btn).value = "X";
+    document.getElementById(btn).value = player;
     // Disable button from future clicking.
     document.getElementById(btn).disabled = true;
     // Check to see if there was a winner.
@@ -10,7 +46,6 @@ function clickButton(btn) {
     computerTurn();
 
   // COMPUTER TURN
-
     // Array of button ids.
     function computerTurn() {
     buttonNames = ['button1', 'button2', 'button3', 'button4', 'button5', 'button6', 'button7', 'button8', 'button9'];
@@ -19,7 +54,7 @@ function clickButton(btn) {
     // If selected button is not disabled,
     if (document.getElementById(randomButton).disabled === false) {
         // Add "O" value to random button.
-        document.getElementById(randomButton).value = "O";
+        document.getElementById(randomButton).value = player2;
         // Disable button from further clicking.
         document.getElementById(randomButton).disabled = true;
         // Check for winner.
@@ -139,4 +174,10 @@ function reset() {
   document.getElementById('button8').value = "";
   document.getElementById('button9').value = "";
   enableAll();
+  document.getElementById('box').style = "display:none;";
+  document.getElementById('resetButton').style = "display:none;";
+  document.getElementById('playerX').style = "display:inline-block;";
+  document.getElementById('playerO').style = "display:inline-block;";
+  document.getElementById('instructions').style = "display:block;";
+
 }
