@@ -15,3 +15,5 @@
 A working demonstration can be found on [CodePen](http://codepen.io/ManBearPigg/full/EKwbrZ/).
 
 Please be mindful of the order of operations when chaining operations together.
+
+Note that operators do not appear in the display. Negative numbers will not be marked "-".
