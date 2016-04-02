@@ -63,30 +63,39 @@ $( document ).ready(function() {
     myNumber = currentCount.join('');
     $("#display").text(myNumber);
   });
+  $("#decimalButton").on("click", function() {
+    currentCount.push(".");
+    myNumber = currentCount.join('');
+    $("#display").text(myNumber);
+  });
 
 // OPERATORS
 
   $("#addButton").on("click", function() {
     numbersInCalculation.push(myNumber, "+");
     currentCount = [];
+    myNumber = null;
     console.log(currentCount);
     console.log(numbersInCalculation);
   });
   $("#subtractButton").on("click", function() {
     numbersInCalculation.push(myNumber, "-");
     currentCount = [];
+    myNumber = null;
     console.log(currentCount);
     console.log(numbersInCalculation);
   });
   $("#multiplyButton").on("click", function() {
     numbersInCalculation.push(myNumber, "*");
     currentCount = [];
+    myNumber = null;
     console.log(currentCount);
     console.log(numbersInCalculation);
   });
   $("#divideButton").on("click", function() {
     numbersInCalculation.push(myNumber, "/");
     currentCount = [];
+    myNumber = null;
     console.log(currentCount);
     console.log(numbersInCalculation);
   });
@@ -94,6 +103,9 @@ $( document ).ready(function() {
     numbersInCalculation.push(myNumber);
     output = numbersInCalculation.join(' ');
     output = eval(output);
+    if (output == "Infinity") {
+      output = "Undefined";
+    }
     $("#display").text(output);
     myNumber = null;
     console.log(numbersInCalculation);
