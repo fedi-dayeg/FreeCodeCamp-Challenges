@@ -1,4 +1,4 @@
-# ManBearPigg's Solutions to FreeCodeCamp Challenges.
+# ManBearPigg's FreeCodeCamp Solutions
 
 *I push my solutions to FreeCodeCamp challenges here to store my files, to display my work, and to guide other campers who are struggling with these exercises.*
 
