@@ -6,6 +6,6 @@
 
 #### Notes
 
-Each of these JavaScript files contains a description of the problem, and a solution to it.
+Each of these JavaScript files contains a description of the problem and a solution to it.
 
 Please note that not all of FreeCodeCamp's intermediate algorithm challenges are available here.
